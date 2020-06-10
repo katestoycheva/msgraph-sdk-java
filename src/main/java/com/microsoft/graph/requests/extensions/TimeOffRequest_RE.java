@@ -4,7 +4,7 @@
 
 package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.requests.extensions.ITimeOffRequest;
-import com.microsoft.graph.requests.extensions.TimeOffRequest;
+import com.microsoft.graph.requests.extensions.TimeOffRequest_RE;
 import com.microsoft.graph.models.extensions.TimeOff;
 
 import com.microsoft.graph.concurrency.ICallback;
@@ -20,7 +20,7 @@ import com.microsoft.graph.options.QueryOption;
 /**
  * The class for the Time Off Request.
  */
-public class TimeOffRequest extends BaseRequest implements ITimeOffRequest {
+public class TimeOffRequest_RE extends BaseRequest implements ITimeOffRequest {
 	
     /**
      * The request for the TimeOff
@@ -29,7 +29,7 @@ public class TimeOffRequest extends BaseRequest implements ITimeOffRequest {
      * @param client         the service client
      * @param requestOptions the options for this request
      */
-    public TimeOffRequest(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
+    public TimeOffRequest_RE(final String requestUrl, final IBaseClient client, final java.util.List<? extends Option> requestOptions) {
         super(requestUrl, client, requestOptions, TimeOff.class);
     }
 
@@ -120,7 +120,7 @@ public class TimeOffRequest extends BaseRequest implements ITimeOffRequest {
      */
      public ITimeOffRequest select(final String value) {
          getQueryOptions().add(new QueryOption("$select", value));
-         return (TimeOffRequest)this;
+         return (TimeOffRequest_RE)this;
      }
 
     /**
@@ -131,7 +131,7 @@ public class TimeOffRequest extends BaseRequest implements ITimeOffRequest {
      */
      public ITimeOffRequest expand(final String value) {
          getQueryOptions().add(new QueryOption("$expand", value));
-         return (TimeOffRequest)this;
+         return (TimeOffRequest_RE)this;
      }
 
 }

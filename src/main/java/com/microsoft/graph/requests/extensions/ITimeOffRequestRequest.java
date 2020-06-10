@@ -78,6 +78,8 @@ public interface ITimeOffRequestRequest extends IHttpRequest {
      * @throws ClientException this exception occurs if the request was unable to complete for any reason
      */
     TimeOffRequest post(final TimeOffRequest newTimeOffRequest) throws ClientException;
+    //com.microsoft.graph.requests.extensions.TimeOffRequest post(final com.microsoft.graph.requests.extensions.TimeOffRequest newTimeOffRequest) throws ClientException;
+
 
     /**
      * Sets the select clause for the request
