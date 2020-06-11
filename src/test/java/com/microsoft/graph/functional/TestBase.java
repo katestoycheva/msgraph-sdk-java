@@ -31,9 +31,9 @@ public class TestBase {
 
     public TestBase()
     {
-        clientId = Constants.APPID;
-        username = Constants.USERNAME;
-        password = Constants.PASSWORD;
+        //clientId = Constants.APPID;
+        //username = Constants.USERNAME;
+        //password = Constants.PASSWORD;
 
         GetAuthenticatedClient();
     }

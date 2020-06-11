@@ -1,5 +1,6 @@
 package com.microsoft.graph.functional;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ import com.microsoft.graph.options.QueryOption;
 import com.microsoft.graph.requests.extensions.ICalendarCollectionPage;
 import com.microsoft.graph.requests.extensions.IEventCollectionPage;
 
-@Ignore
+//@Ignore
 public class CalendarTests {
 	IGraphServiceClient graphServiceClient = null;
 
@@ -25,6 +26,14 @@ public class CalendarTests {
 		TestBase testBase = new TestBase();
 		graphServiceClient = testBase.graphClient;
 	}
+
+	@Test
+	public void testTimeOff() {
+		String actual = graphServiceClient.teams("teamId").schedule().timeOffRequests().getRequestUrl();
+		String expected = "https://graph.microsoft.com/v1.0/teams/teamId/schedule/timeOffRequests";
+		assertEquals("The generated client url does not match the expected url for the list time off request api ", actual, expected);
+	}
+
 
 	@Test
 	public void getMeCalendars() {

@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
 import com.microsoft.graph.models.extensions.*;
+import com.microsoft.graph.models.extensions.TimeOffRequest;
 import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
@@ -27,9 +28,9 @@ public interface ITimeOffRequestCollectionRequest {
 
     ITimeOffRequestCollectionPage get() throws ClientException;
 
-    void post(final TimeOffRequest newTimeOffRequest, final ICallback<TimeOffRequest> callback);
+    void post(final com.microsoft.graph.models.extensions.TimeOffRequest newTimeOffRequest, final ICallback<com.microsoft.graph.models.extensions.TimeOffRequest> callback);
 
-    TimeOffRequest post(final TimeOffRequest newTimeOffRequest) throws ClientException;
+    TimeOffRequest post(final com.microsoft.graph.models.extensions.TimeOffRequest newTimeOffRequest) throws ClientException;
 
     /**
      * Sets the expand clause for the request

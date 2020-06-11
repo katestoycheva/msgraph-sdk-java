@@ -7,6 +7,7 @@ package com.microsoft.graph.requests.extensions;
 import com.microsoft.graph.concurrency.*;
 import com.microsoft.graph.core.*;
 import com.microsoft.graph.models.extensions.*;
+import com.microsoft.graph.models.extensions.TimeOffRequest;
 import com.microsoft.graph.models.generated.*;
 import com.microsoft.graph.http.*;
 import com.microsoft.graph.requests.extensions.*;
@@ -53,14 +54,14 @@ public class TimeOffRequestCollectionRequest extends BaseCollectionRequest<TimeO
         return buildFromResponse(response);
     }
 
-    public void post(final TimeOffRequest newTimeOffRequest, final ICallback<TimeOffRequest> callback) {
+    public void post(final com.microsoft.graph.models.extensions.TimeOffRequest newTimeOffRequest, final ICallback<com.microsoft.graph.models.extensions.TimeOffRequest> callback) {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         new TimeOffRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getOptions())
             .post(newTimeOffRequest, callback);
     }
 
-    public TimeOffRequest post(final TimeOffRequest newTimeOffRequest) throws ClientException {
+    public TimeOffRequest post(final com.microsoft.graph.models.extensions.TimeOffRequest newTimeOffRequest) throws ClientException {
         final String requestUrl = getBaseRequest().getRequestUrl().toString();
         return new TimeOffRequestRequestBuilder(requestUrl, getBaseRequest().getClient(), /* Options */ null)
             .buildRequest(getBaseRequest().getOptions())
