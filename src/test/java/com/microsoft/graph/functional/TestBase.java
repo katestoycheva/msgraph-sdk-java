@@ -18,9 +18,9 @@ import com.microsoft.graph.requests.extensions.GraphServiceClient;
 
 
 public class TestBase {
-    private String clientId;
-    private String username;
-    private String password;
+    private String clientId = "f7218512-c727-4138-9fb9-a0fe2500650c";
+    private String username = "adelev@M365x462896.onmicrosoft.com" ;
+    private String password = "caitbal@7262";
     // Don't use password grant in your apps. Only use for legacy solutions and automated testing.
     private String grantType = "password";
     private String tokenEndpoint = "https://login.microsoftonline.com/common/oauth2/token";
@@ -31,9 +31,9 @@ public class TestBase {
 
     public TestBase()
     {
-        clientId = Constants.APPID;
-        username = Constants.USERNAME;
-        password = Constants.PASSWORD;
+        //clientId = Constants.APPID;
+        //username = Constants.USERNAME;
+        //password = Constants.PASSWORD;
 
         GetAuthenticatedClient();
     }
