@@ -81,11 +81,11 @@ public class CalendarAllowedCalendarSharingRolesCollectionResponse implements IJ
         rawObject = json;
 
 
-        if (json.has("value")) {
-            final JsonArray array = json.getAsJsonArray("value");
-            for (int i = 0; i < array.size(); i++) {
-                value.get(i).setRawObject(serializer, (JsonObject) array.get(i));
-            }
-        }
+//        if (json.has("value")) {
+//            final JsonArray array = json.getAsJsonArray("value");
+//            for (int i = 0; i < array.size(); i++) {
+//                value.get(i).setRawObject(serializer, (JsonObject) array.get(i));
+//            }
+//        }
     }
 }
